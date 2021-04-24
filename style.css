@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+
+/*=============== BASIC SETUP ==============*/
+body{
+    background:  #ADEFD1FF;
+    margin: auto;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+  }
+ h1{
+     color:#00203FFF ;
+ }
+ 
+  /*========== CLOCK SECTION ==========*/
+
+  .clock{
+    background-image: url("images/clock.png");
+    background-size: cover;
+    border: 15px solid #00203FFF;
+    border-radius: 50%;
+    height: 200px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+  }
+  .clock:before{
+    animation: animate 4.9s linear infinite;
+    background: #00203FFF;
+    border-radius: 3px;
+    content: '';
+    height:6px;
+    left: 50%;
+    position: absolute;
+    top: calc(50% - 3px);
+    transform-origin: left;
+    width: 40%;
+  }
+  .clock:after{
+    animation: animate 59.9s linear infinite;
+    background: #00203FFF;
+    border-radius: 3px;
+    content: '';
+    height:6px;
+    left: 50%;
+    position: absolute;
+    top: calc(50% - 3px);
+    transform-origin: left;
+    width: 30%;
+  }
+  span{
+    background: #fff;
+    border-radius: 50%;
+    display: block;
+    height: 10px;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    z-index: 1;
+  }
+
+  /*============= CLOCK SECTION ANIMATION ==========*/
+  @keyframes animate {
+    0%{
+      transform: rotate(-90deg);
+    }
+    100%{
+      transform: rotate(270deg);
+    }
+  }
+  
+  /*=========== THE END ==========*/
